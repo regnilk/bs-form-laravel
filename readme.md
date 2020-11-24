@@ -343,7 +343,7 @@ These buttons can contain icons. They are provided by [regnilk/fa-laravel](#http
 ##### <ins>Reset</ins>
 
 ```html
-    <x-form-btn-submit icon="reset" text="Reset" class="btn-sm btn-secondary"/>
+    <x-form-btn-reset icon="reset" text="Reset" class="btn-sm btn-secondary"/>
 ```
 
 - **_icon_** : the icon displayed in the button _(optional)_. 
@@ -353,12 +353,36 @@ These buttons can contain icons. They are provided by [regnilk/fa-laravel](#http
 ##### <ins>Back</ins>
 
 ```html
-    <x-form-btn-submit icon="back" text="Back" class="btn-sm btn-info"/>
+    <x-form-btn-back icon="back" text="Back" class="btn-sm btn-info"/>
 ```
 
 - **_icon_** : the icon displayed in the button _(optional)_. 
 
 - **_text_** : the text of the button. 'Back' is the default text. _(optional)_
+
+##Usage
+
+##### <ins>Working with errors</ins>
+
+Errors can be displayed in the bootstrap style for each input.
+The fields can also be repopulated when an error occurs.
+
+To have it working, you will need to do your redirection this way in your controller :
+
+```php
+    public function store(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required'
+        ]);
+
+        if ($validator->fails()):
+            return redirect()->back()->withInput()->withErrors($validator);
+        else:
+            //Validator OK
+        endif;
+    }
+```
 
 ## Contact
 
