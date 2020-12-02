@@ -52,7 +52,7 @@
             Blade::component('form-close', Close::class);
             Blade::component('form-text', Text::class);
             Blade::component('form-textarea', Textarea::class);
-            Blade::component('form-textarea', Hidden::class);
+            Blade::component('form-hidden', Hidden::class);
             Blade::component('form-number', Number::class);
             Blade::component('form-password', Password::class);
             Blade::component('form-email', Email::class);
