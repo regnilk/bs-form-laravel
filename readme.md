@@ -31,6 +31,8 @@ Laravel components for easy form building
     * [Form element](#element)
 * [Inputs](#inputs)
     * [Text](#text)
+    * [Textarea](#textarea)
+    * [Hidden](#hidden)
     * [Number](#number)
     * [Password](#password)
     * [Email](#email)
@@ -39,7 +41,7 @@ Laravel components for easy form building
     * [Checkbox](#checkbox)
     * [Radio](#radio)
     * [Select](#select)
-    * [Select Range](#select range)
+    * [Select Range](#select_range)
 * [Buttons](#buttons)
     * [Submit](#submit)
     * [Reset](#reset)
@@ -189,6 +191,30 @@ to this
 - **_name_** : the name of the field. It must match the name of the x-form-elem.
 
 - **_value_** : the value to fill the field with _(optional)_
+
+##### <ins>Textarea</ins> 
+
+```html
+    <x-form-elem name="myTextArea" label="myLabel">
+        <x-form-text name="myTextArea" :value="$textarea" />
+    </x-form-elem>
+```
+
+- **_name_** : the name of the field. It must match the name of the x-form-elem.
+
+- **_value_** : the value to fill the field with _(optional)_
+
+##### <ins>Hidden</ins> 
+
+```html
+    <x-form-text name="myHiddenField" :value="$myHiddenValue"/>
+```
+
+- **_name_** : the name of the field. It must match the name of the x-form-elem.
+
+- **_value_** : the value to fill the field with _(optional)_
+
+> Note that there id no need to wrap the hidden component within a x-form-elem for it will not be displayed 
 
 ##### <ins>Number</ins>
 

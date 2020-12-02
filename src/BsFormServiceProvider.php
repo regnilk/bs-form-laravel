@@ -5,7 +5,7 @@
     use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
     use Illuminate\Support\Facades\Blade;
     use Regnilk\BsFormLaravel\Components\{Elem, Open, Close};
-    use Regnilk\BsFormLaravel\Components\Inputs\{Checkbox, Date, Email, File, Password, Radio, Select, SelectRange, Text, Number};
+    use Regnilk\BsFormLaravel\Components\Inputs\{Checkbox, Date, Email, File, Hidden, Password, Radio, Select, SelectRange, Text, Number, Textarea};
     use Regnilk\BsFormLaravel\Components\Buttons\{Reset, Submit, Back};
 
     class BsFormServiceProvider extends LaravelServiceProvider
@@ -27,6 +27,8 @@
             $this->loadViewComponentsAs('form', [
                 Elem::class,
                 Text::class,
+                Textarea::class,
+                Hidden::class,
                 Open::class,
                 Close::class,
                 Number::class,
@@ -49,6 +51,8 @@
             Blade::component('form-elem', Elem::class);
             Blade::component('form-close', Close::class);
             Blade::component('form-text', Text::class);
+            Blade::component('form-textarea', Textarea::class);
+            Blade::component('form-textarea', Hidden::class);
             Blade::component('form-number', Number::class);
             Blade::component('form-password', Password::class);
             Blade::component('form-email', Email::class);
