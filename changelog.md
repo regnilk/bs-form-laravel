@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.2.2 - 16/12/2020
+
+- Debug help text
+- Update readme
+
 ## 0.2.1 - 16/12/2020
 
 - adding help text under field

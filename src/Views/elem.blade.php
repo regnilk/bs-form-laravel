@@ -12,7 +12,7 @@
                     <strong>{{ $errors->first($name) }}</strong>
                 </div>
             @elseif(!is_null($help))
-                <div class="small text-muted">
+                <div class="small w-100 mt-1 text-muted">
                     {{$help}}
                 </div>
             @endif

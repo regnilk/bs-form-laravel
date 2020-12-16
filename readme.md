@@ -166,7 +166,7 @@ Use all these input components inside a x-form-elem component.
 
 > Each of them can be customized with usual class, style, etc.
 
-**Tip** :
+**Tips** :
 
 If you need to provide a php variable as a paramater value, just change this 
 
@@ -178,6 +178,12 @@ to this
 
 ```html
     <x-form-elem name="myText" :label="$label"></x-form-elem>
+```
+
+If you want a helping text displayed under the field. Do as follows :
+
+```html
+    <x-form-elem name="myText" :label="$label" help="this field is required"></x-form-elem>
 ```
 
 ##### <ins>Text</ins> 
