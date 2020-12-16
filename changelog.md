@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.3 - 16/12/2020
+
+- Change radio button "id" and label "for" to avoid same ids
+
 ## 0.2.2 - 16/12/2020
 
 - Debug help text
