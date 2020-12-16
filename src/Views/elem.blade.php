@@ -11,6 +11,10 @@
                 <div class="invalid-feedback">
                     <strong>{{ $errors->first($name) }}</strong>
                 </div>
+            @elseif(!is_null($help))
+                <div class="small text-muted">
+                    {{$help}}
+                </div>
             @endif
         </div>
     </div>

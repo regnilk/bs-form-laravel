@@ -11,19 +11,21 @@ class Elem extends Component
     public $icon;
     public $label;
     public $labelWidth;
+    public $help;
     
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $label, $width=12, $icon='', $labelWidth='150')
+    public function __construct($name, $label, $width=12, $icon='', $labelWidth='150', $help=null)
     {
         $this->name = trim($name);
         $this->width = $width;
         $this->icon = trim($icon);
         $this->label = trim($label);
         $this->labelWidth = $labelWidth;
+        $this->help = $help;
     }
 
     /**
