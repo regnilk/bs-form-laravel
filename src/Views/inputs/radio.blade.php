@@ -11,7 +11,7 @@
 
 <div class="form-check mx-3 my-2">
     {!! Form::radio($name, $value, $checked, $clean($attributes->merge(['id' => $name.'-'.$slug, 'class' => "form-check-input $valid"]))) !!}
-    <label class="form-check-label" for="{{$name.'-'.$slug}}">
+    <label class="form-check-label {{$labelClass}}" for="{{$name.'-'.$slug}}">
         {{ $label }}
     </label>
 </div>

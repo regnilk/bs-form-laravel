@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.4 - 18/01/2021
+
+- Adding labelClass to radio and checkbox labels 
+
 ## 0.2.3 - 16/12/2020
 
 - Change radio button "id" and label "for" to avoid same ids

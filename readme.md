@@ -280,7 +280,7 @@ If you want a helping text displayed under the field. Do as follows :
 ```html
     <x-form-elem name="myFile" label="myLabel">
         <x-form-check name="check1" label="label 1" value="1" />
-        <x-form-check name="check2" label="label 2" value="2" />
+        <x-form-check name="check2" label="label 2" value="2" label-class="text-danger"/>
         <x-form-check name="check2" label="label 2" value="3" checked="true" />
     </x-form-elem>
 ```
@@ -293,15 +293,15 @@ If you want a helping text displayed under the field. Do as follows :
 
 - **_checked_** : defines the checkbox as checked. By default it's set to false _(optional)_ 
 
-
+- **_label-class_** : classes to add to the label of the checkbox. _(optional)_
 
 ##### <ins>Radio</ins>
 
 ```html
     <x-form-elem name="radio" label="myLabel">
        <x-form-radio name="radio" label="label 1" value="1" checked="true" />
-       <x-form-radio name="radio" label="label 2" value="2"/>
-       <x-form-radio name="radio" label="label 3" value="3"/>
+       <x-form-radio name="radio" label="label 2" value="2" label-class="text-success"/>
+       <x-form-radio name="radio" label="label 3" value="3" />
     </x-form-elem>
 ```
 - **_name_** : the name of the radio buttons. It must be the same for each radio button of the group and match the x-form-elem name.
@@ -311,6 +311,8 @@ If you want a helping text displayed under the field. Do as follows :
 - **_value_** : the value associated to the radio _(optional)_.
 
 - **_checked_** : defines the radio button as checked. By default it's set to false _(optional)_ 
+
+- **_label-class_** : classes to add to the label of the radio button. _(optional)_
 
 ##### <ins>Select</ins>
 

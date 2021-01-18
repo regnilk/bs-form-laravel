@@ -12,19 +12,21 @@
         public $checked;
         public $label;
         public $slug;
+        public $labelClass;
         
         /**
          * Create a new component instance.
          *
          * @return void
          */
-        public function __construct($name, $label, $value = '', $checked = false)
+        public function __construct($name, $label, $value = '', $checked = false, $labelClass='')
         {
             $this->name = $name;
             $this->label = $label;
             $this->value = $value;
             $this->checked = $checked;
             $this->slug = Str::slug(trim($label));
+            $this->labelClass = $labelClass;
         }
         
         /**
