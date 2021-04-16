@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.2.7 - 16/04/2021
+
+- debug get method
+
+## 0.2.6 - 16/04/2021
+
+- debug get method
+
 ## 0.2.5 - 01/02/2021
 
 - Update readme
