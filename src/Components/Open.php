@@ -39,7 +39,7 @@
             $retour = [];
             
             foreach ($data as $key => $value):
-                if ($key == 'method' and $value != "post"):
+                if ($key == 'method' and !in_array($value, ["post", "get"])):
                     $retour['method'] = 'post';
                 elseif(!in_array($key, ['route', 'action'])):
                     $retour[$key] = $value;
