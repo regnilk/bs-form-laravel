@@ -202,13 +202,15 @@ If you want a helping text displayed under the field. Do as follows :
 
 ```html
     <x-form-elem name="myTextArea" label="myLabel">
-        <x-form-text name="myTextArea" :value="$textarea" />
+        <x-form-textarea name="myTextArea" :value="$textarea" cols="30" rows="4"/>
     </x-form-elem>
 ```
 
 - **_name_** : the name of the field. It must match the name of the x-form-elem.
 
 - **_value_** : the value to fill the field with _(optional)_
+
+> Tip: usual parameters of textarea element are still working
 
 ##### <ins>Hidden</ins> 
 

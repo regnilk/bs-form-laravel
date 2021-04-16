@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.5 - 01/02/2021
+
+- Update readme
+
 ## 0.2.4 - 18/01/2021
 
 - Adding labelClass to radio and checkbox labels 
