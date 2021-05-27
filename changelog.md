@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.8 - 27/05/2021
+
+- debug select options
+
 ## 0.2.7 - 16/04/2021
 
 - debug get method
