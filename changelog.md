@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.9 - 27/05/2021
+
+- debug select options (2)
+
 ## 0.2.8 - 27/05/2021
 
 - debug select options

@@ -38,16 +38,14 @@
         
         public function buildSelect()
         {
-            $retour = NULL;
+            $retour = [];
             
             if (is_array($this->options)):
-                if (sizeof($this->options) > 0):
-                    foreach ($this->options as $option):
-                        $retour[$option[$this->key]] = $option[$this->label];
-                    endforeach;
-                endif;
+                foreach($this->options as $option):
+                    $retour[$option[$this->key]] = $option[$this->label];
+                endforeach;
             else:
-                foreach ($this->options as $option):
+                foreach($this->options as $option):
                     $retour[$option->{$this->key}] = $option->{$this->label};
                 endforeach;
             endif;
