@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.2.10 - 30/06/2021
+- fix PHP8 select
+
 ## 0.2.9 - 27/05/2021
 
 - debug select options (2)

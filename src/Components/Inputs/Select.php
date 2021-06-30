@@ -17,7 +17,7 @@
          *
          * @return void
          */
-        public function __construct($name, $options = [], $selected = NULL, $key = 'id', $label)
+        public function __construct($name, $options = [], $selected = NULL, $key = 'id', $label="")
         {
             $this->name = $name;
             $this->options = $options;
