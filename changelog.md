@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.11 - 08/12/2021
+
+- update toggle component
+
 ## 0.2.10 - 08/12/2021
 
 - add toggle component
