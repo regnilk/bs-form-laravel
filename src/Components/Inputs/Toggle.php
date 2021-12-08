@@ -3,7 +3,9 @@
     namespace Regnilk\BsFormLaravel\Components\Inputs;
     
     use Illuminate\View\Component;
-    
+
+    //Toggle is a different checkbox
+
     class Toggle extends Component
     {
         public $name;
