@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.10 - 08/12/2021
+
+- add toggle component
+
 ## 0.2.9 - 27/05/2021
 
 - debug select options (2)

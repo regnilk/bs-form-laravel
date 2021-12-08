@@ -5,7 +5,7 @@
     use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
     use Illuminate\Support\Facades\Blade;
     use Regnilk\BsFormLaravel\Components\{Elem, Open, Close};
-    use Regnilk\BsFormLaravel\Components\Inputs\{Checkbox, Date, Email, File, Hidden, Password, Radio, Select, SelectRange, Text, Number, Textarea};
+    use Regnilk\BsFormLaravel\Components\Inputs\{Checkbox, Date, Email, File, Hidden, Password, Radio, Select, SelectRange, Text, Number, Textarea, Toggle};
     use Regnilk\BsFormLaravel\Components\Buttons\{Reset, Submit, Back};
 
     class BsFormServiceProvider extends LaravelServiceProvider
@@ -43,6 +43,7 @@
                 Submit::class,
                 Reset::class,
                 Back::class,
+                Toggle::class,
             ]);
     
             $this->loadViewsFrom(__DIR__ . '/Views', 'bs-form-laravel');
@@ -65,5 +66,6 @@
             Blade::component('form-btn-submit', Submit::class);
             Blade::component('form-btn-reset', Reset::class);
             Blade::component('form-btn-back', Back::class);
+            Blade::component('form-toggle', Toggle::class);
         }
     }
