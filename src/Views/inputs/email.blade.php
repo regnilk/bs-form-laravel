@@ -1,10 +1,19 @@
 @php
     $valid = '';
     if(sizeof($errors) > 0) :
-        if($errors->has($name)) :
-            $valid = 'is-invalid';
+        $fieldName = $errorName !== '' ? $errorName : $name;
+        if($errorBag  !== '') :
+            if($errors->getBag($errorBag)->has($fieldName)) :
+                $valid = 'is-invalid';
+            else :
+                $valid = 'is-valid';
+            endif;
         else :
-            $valid = 'is-valid';
+            if($errors->has($fieldName)) :
+                $valid = 'is-invalid';
+            else :
+                $valid = 'is-valid';
+            endif;
         endif;
     endif;
 @endphp

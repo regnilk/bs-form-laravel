@@ -7,15 +7,19 @@
     class File extends Component
     {
         public $name;
+        public $errorName;
+        public $errorBag;
         
         /**
          * Create a new component instance.
          *
          * @return void
          */
-        public function __construct($name)
+        public function __construct($name, $errorName = '', $errorBag = '')
         {
             $this->name = $name;
+            $this->errorName = $errorName ?? $this->name;
+            $this->errorBag = $errorBag;
         }
         
         /**

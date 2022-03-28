@@ -8,16 +8,20 @@
     {
         public $name;
         public $value;
+        public $errorName;
+        public $errorBag;
         
         /**
          * Create a new component instance.
          *
          * @return void
          */
-        public function __construct($name, $value = '')
+        public function __construct($name, $value = '', $errorName = '', $errorBag = '')
         {
             $this->name = $name;
             $this->value = $value;
+            $this->errorName = $errorName ?? $this->name;
+            $this->errorBag = $errorBag;
         }
         
         /**

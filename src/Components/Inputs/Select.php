@@ -11,19 +11,23 @@
         public $selected;
         public $key;
         public $label;
+        public $errorName;
+        public $errorBag;
         
         /**
          * Create a new component instance.
          *
          * @return void
          */
-        public function __construct($name, $options = [], $selected = NULL, $key = 'id', $label)
+        public function __construct($name, $options = [], $selected = NULL, $key = 'id', $label, $errorName = '', $errorBag = '')
         {
             $this->name = $name;
             $this->options = $options;
             $this->selected = $selected;
             $this->key = $key;
             $this->label = $label;
+            $this->errorName = $errorName ?? $this->name;
+            $this->errorBag = $errorBag;
         }
         
         /**

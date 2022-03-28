@@ -17,7 +17,7 @@
          *
          * @return void
          */
-        public function __construct($name, $label, $value = '', $checked = false, $labelClass='')
+        public function __construct($name, $label, $value = '', $checked = false, $labelClass='', $errorName = '', $errorBag = '')
         {
             $this->name = $name;
             $this->label = $label;
