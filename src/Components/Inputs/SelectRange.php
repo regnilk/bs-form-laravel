@@ -11,21 +11,21 @@
         public $end;
         public $selected;
         public $errorName;
-        public $errorBag;
+        public $errorBagName;
         
         /**
          * Create a new component instance.
          *
          * @return void
          */
-        public function __construct($name, $start, $end, $selected=null, $errorName = null, $errorBag = null)
+        public function __construct($name, $start, $end, $selected=null, $errorName = null, $errorBagName = null)
         {
             $this->name = $name;
             $this->start = $start;
             $this->end = $end;
             $this->selected = $selected;
             $this->errorName = $errorName ?? $this->name;
-            $this->errorBag = $errorBag;
+            $this->errorBagName = $errorBagName;
         }
         
         /**
