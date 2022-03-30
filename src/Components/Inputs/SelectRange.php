@@ -18,7 +18,7 @@
          *
          * @return void
          */
-        public function __construct($name, $start, $end, $selected=null, $errorName = '', $errorBag = '')
+        public function __construct($name, $start, $end, $selected=null, $errorName = null, $errorBag = null)
         {
             $this->name = $name;
             $this->start = $start;

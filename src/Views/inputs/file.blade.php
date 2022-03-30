@@ -19,3 +19,6 @@
 @endphp
 
 {!! Form::file($name, $clean($attributes->merge(['id' => $name, 'class' => "form-control $valid"]))) !!}
+@if($errorBag->has($errorName))
+    <span class="help-block invalid-feedback"><strong>{{ $errorBag->first($errorName) }}</strong></span>'
+@endif

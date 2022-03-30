@@ -11,19 +11,23 @@
         public $checked;
         public $label;
         public $labelClass;
+        public $errorName;
+        public $errorBag;
         
         /**
          * Create a new component instance.
          *
          * @return void
          */
-        public function __construct($name, $label, $value = '', $checked = false, $labelClass='', $errorName = '', $errorBag = '')
+        public function __construct($name, $label, $value = '', $checked = false, $labelClass='', $errorName = null, $errorBag = null)
         {
             $this->name = $name;
             $this->label = $label;
             $this->value = $value;
             $this->checked = $checked;
             $this->labelClass = $labelClass;
+            $this->errorName = $errorName ?? $this->name;
+            $this->errorBag = $errorBag;
         }
         
         /**

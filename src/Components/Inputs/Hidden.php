@@ -16,7 +16,7 @@
          *
          * @return void
          */
-        public function __construct($name, $value = '', $errorName = '', $errorBag = '')
+        public function __construct($name, $value = '', $errorName = null, $errorBag = null)
         {
             $this->name = $name;
             $this->value = $value;

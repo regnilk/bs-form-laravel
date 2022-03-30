@@ -1,21 +1,17 @@
 @php
     $valid = '';
     if(sizeof($errors) > 0) :
-        $fieldName = $errorName !== '' ? $errorName : $name;
-        if($errorBag  !== '') :
-            if($errors->getBag($errorBag)->has($fieldName)) :
-                $valid = 'is-invalid';
-            else :
-                $valid = 'is-valid';
-            endif;
+        $errorName;
+        $errorBag = $errorBag !== '' ? $errors->getBag($errorBag) : $errors;
+        if($errorBag->has($errorName)) :
+            $valid = 'is-invalid';
         else :
-            if($errors->has($fieldName)) :
-                $valid = 'is-invalid';
-            else :
-                $valid = 'is-valid';
-            endif;
+            $valid = 'is-valid';
         endif;
     endif;
 @endphp
 
 {!! Form::text($name, $value, $clean($attributes->merge(['id' => $name, 'class' => "form-control $valid"]))) !!}
+@if($errorBag->has($errorName))
+    <span class="help-block invalid-feedback"><strong>{{ $errorBag->first($errorName) }}</strong></span>'
+@endif
